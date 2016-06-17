@@ -13,7 +13,7 @@ MAINTAINER deepkh <deepkh@gmail.com>
 ################## BEGIN INSTALLATION ######################
 
 RUN apt-get update
-RUN apt-get install -y build-essential debian-archive-keyring debootstrap qemu-user qemu-user-static gperf bison flex texinfo help2man gawk libtool libtool-bin automake libncurses5-dev vim python python2.7-dev bc curl cmake git wget xz-utils apt-transport-https ca-certificates --no-install-recommends
+RUN apt-get install -y build-essential debian-archive-keyring debootstrap qemu-user qemu-user-static gperf bison flex texinfo help2man gawk libtool libtool-bin automake libncurses5-dev vim python python2.7-dev bc curl cmake git wget xz-utils apt-transport-https ca-certificates sudo --no-install-recommends
 
 # add user 'build' with uid 9999 in docker without home
 # also add 'build' on host and with home
