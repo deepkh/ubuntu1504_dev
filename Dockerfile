@@ -26,6 +26,9 @@ RUN echo "root:1234" | chpasswd
 # change build password to 1234
 RUN echo "build:1234" | chpasswd
 
+# add build user to sudo file
+RUN echo "build    ALL=(ALL:ALL) ALL" > /etc/sudoers
+
 ##################### INSTALLATION END #####################
 USER build
 WORKDIR /home/build
